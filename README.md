@@ -2,7 +2,7 @@
 
 ## Overview
 
-Este repositorio contiene un **agente inteligente** que utiliza un modelo de **machine learning** para detectar anomalías en una red móvil y tomar decisiones automáticas o generar tickets para revisión humana.
+Este repositorio contiene una versión inicial de un **agente inteligente** que utiliza un modelo de **machine learning** para detectar anomalías en una red móvil y tomar decisiones automáticas o generar tickets para revisión humana. Teniendo como objetivo empezar a familiarizarse con el manejo de frameworks para gestión de agentes de IA y el protocolo MCP.
 
 El modelo de clasificación ha sido entrenado previamente en el repositorio:
 
@@ -21,7 +21,7 @@ El agente se conecta a herramientas externas como Gmail haciendo uso del protoco
 - Zona intermedia (0.3 ≤ prob < 0.5): Posible anomalía leve. El agente crea un ticket automático (todavía simulado) a través del servidor MCP (enviar_ticket_email) para revisión humana.
 - Zona crítica (prob ≥ 0.5): Anomalía confirmada, se registra el evento y se recomienda acción inmediata.
 
-**Versión inicial conectandose a un "dummy server" que tofavía no tiene funcionalidad real de conectividad con aplicaciones externas**
+**Versión inicial conectandose a un "dummy server" que todavía no tiene funcionalidad real de conectividad con aplicaciones externas**
 
 
 ## Estructura del proyecto
@@ -88,4 +88,5 @@ max_tokens = 512
 ### Próximos pasos
 
 - Añadir más modelos como Gemini.
+
 - Conectividad real de MCPserver con aplicaciones externas
