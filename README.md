@@ -2,7 +2,7 @@
 
 ## Overview
 
-Este repositorio contiene una versión inicial de un **agente inteligente** que utiliza un modelo de **machine learning** para detectar anomalías en una red móvil y tomar decisiones automáticas o generar tickets para revisión humana. Teniendo como objetivo empezar a familiarizarse con el manejo de frameworks para gestión de agentes de IA y el protocolo MCP.
+Este repositorio contiene una versión inicial de un **agente inteligente** que utiliza un modelo de **machine learning** para detectar anomalías en una red móvil y tomar decisiones automáticas o generar tickets para revisión humana. Mi objetivo es empezar a familiarizarme con el manejo de frameworks para gestión de agentes de IA y el protocolo MCP.
 
 El modelo de clasificación ha sido entrenado previamente en el repositorio:
 
@@ -90,3 +90,4 @@ max_tokens = 512
 - Añadir más modelos como Gemini.
 
 - Conectividad real de MCPserver con aplicaciones externas
+
