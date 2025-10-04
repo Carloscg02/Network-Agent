@@ -1,0 +1,59 @@
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "agente_anomalias_red"
+description = "Agente inteligente para detección y gestión de anomalías en red móvil"
+version = "0.1.0"
+dependencies = [
+  "pandas",
+  "scikit-learn",
+  "joblib",
+  "langchain",
+  "ollama",
+  "joblib",
+  "langchain-ollama",
+  "langchain-google-genai",
+  "langchain-openai",
+  "langchain-core",
+  "openai",
+  "python-dotenv",
+  "mcp",
+  "fastmcp",
+  "mcp_use"
+]
+
+
+[classifier]
+# Ruta al modelo entrenado (ejemplo: joblib, pickle, xgboost.json)
+model_path = "models/rf_anomaly_detector.joblib"
+
+[thresholds]
+# Valores de probabilidad para dividir regiones
+low = 0.4
+high = 0.7
+
+[agent]
+# Modelo LLM a usar vía Ollama
+llm_model = "llama3.2"
+temperature = 0.2
+max_tokens = 512
+
+[openai]
+# Activar para usar ChatGPT en lugar de Ollama
+use_chatgpt = false
+model_name = "gpt-3.5-turbo"
+temperature = 0.2
+max_tokens = 512
+
+[tickets]
+# Configuración de tickets simulados
+save_to_file = true
+file_path = "outputs/tickets.log"
+
+[acciones]
+# Configuración de acciones automáticas
+log_to_file = true
+file_path = "outputs/acciones.log"
+# Simulación de política de ajuste de ancho de banda (porcentaje)
+ajuste_bandwidth = 20
